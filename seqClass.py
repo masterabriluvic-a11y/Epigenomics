@@ -17,7 +17,6 @@ args = parser.parse_args()
 args.seq = args.seq.upper()
 
 # FIX: Validate that the sequence contains only valid nucleotides (A,C,G,T,U)
-# If not, it is neither DNA nor RNA.
 if re.search(r'^[ACGTU]+$', args.seq):
     has_t = 'T' in args.seq
     has_u = 'U' in args.seq
